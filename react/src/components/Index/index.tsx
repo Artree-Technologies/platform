@@ -4,21 +4,21 @@ import axios from 'axios';
 
 export default class Index extends React.Component {
     state = {
-      persons: []
+      message: []
     }
 
     componentDidMount() {
-      axios.get(`http://localhost:5000/api`)
+      axios.get(`http://localhost:5000/api/v1`)
         .then(res => {
-          const persons = res;
-          this.setState({ persons });
+          const message = res.data.message;
+          this.setState({ message });
         })
     }
 
     render() {
       return (
         <ul>
-          <h1>{ this.state.persons }</h1>
+          <h1>{ this.state.message }</h1>
           <h1>Here is index</h1>
         </ul>
       )

@@ -12,14 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use((req, res, next) => {
-    // TODO Add origin validation
-    res.header('content-type', 'text/html')
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-});
 
-app.use('/api/vi', indexRouter);
+app.use('/api/v1', indexRouter);
 
 module.exports = app;
