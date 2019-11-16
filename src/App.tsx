@@ -1,12 +1,13 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
-import logo from './logo.svg';
-import './App.css';
+import logo from './static/logo.jpg';
+import './static/App.scss';
 import Artwork from './components/Artwork';
 import Index from './components/Index';
 
 const App: React.FC = () => (
     <div className="container">
+      <img src={logo} className="App-logo" alt="logo" />
       <Switch>
         <Route path="/artwork" component={Artwork}/>
         <Route path="/" component={Index}/>
