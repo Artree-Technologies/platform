@@ -6,3 +6,4 @@
 # Setup
 `/react` -> `$ npm i && yarn start`  
 `/express` -> `$ npm i && bin/www`  
+or `$ make build`
