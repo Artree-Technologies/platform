@@ -8,9 +8,9 @@ export default class Index extends React.Component {
     }
 
     componentDidMount() {
-      axios.get(`http://localhost:5000/api/v1`)
+      axios.get(`http://localhost:5000/api`)
         .then(res => {
-          const persons = res.data;
+          const persons = res;
           this.setState({ persons });
         })
     }
@@ -18,7 +18,7 @@ export default class Index extends React.Component {
     render() {
       return (
         <ul>
-          { this.state.persons }
+          <h1>{ this.state.persons }</h1>
           <h1>Here is index</h1>
         </ul>
       )
