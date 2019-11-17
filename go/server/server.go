@@ -38,13 +38,7 @@ func Start(port string) {
 
 			fmt.Println(request)
 
-			response := http.Response{
-				StatusCode: 200,
-				ProtoMajor: 1,
-				ProtoMinor: 0,
-				Body: ioutil.NopCloser(
-					strings.NewReader("hello world\n")),
-			}
+			response := CreateResponse(200, 1, 0, ioutil.NopCloser(strings.NewReader("hello world\n")))
 
 			response.Write(conn)
 			conn.Close()
