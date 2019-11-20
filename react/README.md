@@ -1,2 +1,2 @@
 # Setup application
-`$ yarn start`  -> localhost:3000  
+`$ yarn dev`  -> localhost:3000  
