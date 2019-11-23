@@ -12,6 +12,7 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - docker-compose up -d
+  - docker exec -it solidity npm install
 
 script:
   - docker exec -it solidity truffle test --network test
