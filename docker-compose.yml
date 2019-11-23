@@ -9,3 +9,11 @@ services:
       - ganache-cli
       - --mnemonic
       - 'belt prize arrow cabbage banner proof word above ability helmet design rely'
+  solditiy:
+    build: ./solidity
+    container_name: solidity
+    tty: true
+    volumes:
+      - ./solidity:/app
+    depends_on:
+      - ganache

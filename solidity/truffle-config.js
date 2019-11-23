@@ -47,6 +47,22 @@ module.exports = {
      port: 8545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
+    test: {
+      host: "ganache",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+     },
+    rinkeby: {
+      provider: () => {
+        return new HDWalletProvider(
+          "funny concert mad display erase art spell stairs train village such essay",
+          "https://rinkeby.infura.io/v3/df995414148e47f4807318c48283f51b",
+          1, /* address_index: default is 0 */
+          1 /* num_addresses */
+        )
+      },
+      network_id: "*",
+    },
 
     // Another network with more advanced options...
     advanced: {
