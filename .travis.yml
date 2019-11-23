@@ -1,4 +1,8 @@
 language: node_js
+node_js:
+  - 12
+
+cache: npm
 
 services:
   - docker
@@ -11,10 +15,12 @@ before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
-  - docker-compose up -d
-  - docker ps
-  - docker exec -it solidity ls -a
-  - docker exec -it solidity npm install
+
+before_script:
+  - docker-compose up --build -d
 
 script:
-  - docker exec -it solidity truffle test --network test
+  - docker-compose run solidity truffle test --network test
+
+after_script:
+  - docker-compose down
