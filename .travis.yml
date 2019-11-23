@@ -12,7 +12,7 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - docker-compose up
-  - docker run solidity /bin/sh -c "truffle test --network test"
+  - docker exec -it solidity /bin/sh
 
 script:
   - truffle test --network test
