@@ -14,6 +14,6 @@ services:
     container_name: solidity
     tty: true
     volumes:
-      - ./solidity:/app
+      - ./solidity:.
     depends_on:
       - ganache
