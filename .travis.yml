@@ -4,6 +4,8 @@ node_js:
 
 cache: npm
 
+sudo: required
+
 services:
   - docker
 
@@ -20,7 +22,7 @@ before_script:
   - docker-compose up --build -d
 
 script:
-  - docker-compose run solidity truffle test --network test
+  - docker exec -it solidity truffle test --network test
 
 after_script:
   - docker-compose down
