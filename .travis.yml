@@ -20,7 +20,7 @@ before_install:
 
 before_script:
   - docker-compose up --build -d
-  - docker exec -it solidity npm -i @openzeppelin/contracts-ethereum-package @openzeppelin/upgrades
+  - docker exec -it solidity npm i @openzeppelin/contracts-ethereum-package @openzeppelin/upgrades
 
 script:
   - docker exec -it solidity truffle test --network test
