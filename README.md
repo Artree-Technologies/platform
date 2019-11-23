@@ -1,19 +1,17 @@
 # Directory structure
-```
-/ganache -> Ganache test container dockerfile  
-/go -> Backend api server  
-/react -> Frontend ui  
-/solidity  
+`/ganache` -> Ganache test container dockerfile  
+`/go` -> Backend api server  
+`/react` -> Frontend ui  
+`/solidity`  
     |--/contract -> ERC721 token minting contract  
-```
 
 # Project tools
-CI Tool -> Travis  
-Task Runner -> Make  
-Blockchain -> Ethereum  
-API Framework -> Go, [Rest](https://github.com/ant0ine/go-json-rest)
-Blockchain SDK -> Truffle, Open Zeppelin, Ganache  
-Frontend Framework -> React, TypeScript, (Redux)  
+`CI Tool` -> Travis⚖️  
+`Task Runner` -> Make🚀  
+`Blockchain` -> Ethereum❄️  
+`API Framework` -> Go, [Rest](https://github.com/ant0ine/go-json-rest)🗿  
+`Blockchain SDK` -> Truffle, Open Zeppelin, Ganache🧁  
+`Frontend Framework` -> React, TypeScript, (Redux)🚷  
 
 # Node version
 `v12.11.1`
