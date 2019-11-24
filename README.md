@@ -16,6 +16,6 @@
 # Node version
 `v12.11.1`
 # Setup
-`/react` -> `$ npm i && yarn start`  
+`/react` -> `$ npm i && yarn dev`  
 `/go` -> `$ go run go/main.go`  
 `/solidity` -> `$ ganache-cli -l 80000000 & truffle compile && oz create`  
